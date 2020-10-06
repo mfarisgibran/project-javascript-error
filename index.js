@@ -1,11 +1,12 @@
 try {
-  const name = "Faris";
+  const expectedName = "Faris";
+  const inputName = prompt("What's your name?");
 
-  if (name === "Faris") {
-    console.log("You are " + name);
+  if (expectedName.toLowerCase() === inputName.toLowerCase()) {
+    console.log("You are " + expectedName);
   } else {
-    throw Error("You are not " + name);
+    throw Error("You are not " + expectedName);
   }
 } catch (error) {
-  alert.error(error.message);
+  console.error(error.message);
 }
